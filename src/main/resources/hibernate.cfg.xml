@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <session-factory>
+        <!-- SQL dialect, only thing required for Spring. 
+        For stanalone application, other DB configs are required -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+
+        <!-- hibernate dialect -->
+
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/setup</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">3333</property>
+        <!--<property name="hibernate.connection.pool_size">1</property>-->
+        <property name="current_session_context_class">thread</property>
+        <mapping resource="domain-classes.hbm.xml"/>
+
+
+
+    </session-factory>
+
+</hibernate-configuration>
